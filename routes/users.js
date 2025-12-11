@@ -37,7 +37,7 @@ router.post("/users", async (req, res) => {
       `INSERT INTO users (username, email, password_hash, role, is_blocked, created_at)
        VALUES ($1, $2, $3, $4, $5, NOW())`,
       [username, email, passwordHash, "user", false]
-    );
+    );f
 
     return res.status(201).json({ message: "You have registered." });
   } catch (err) {
